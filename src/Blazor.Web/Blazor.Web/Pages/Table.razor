@@ -1,0 +1,28 @@
+﻿@page "/table"
+@inject HttpClient Http
+
+<MatTable Class="mat-elevation-z5" Items="@items">
+    <MatTableHeader>
+        <th>
+            Name
+        </th>
+    </MatTableHeader>
+    <MatTableRow Context="ItemRow">
+        <td>@ItemRow.Name</td>
+    </MatTableRow>
+</MatTable>
+
+
+@code {
+
+    public class Item
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    List<Item> items = new List<Item>()
+{
+        new Item() { Id = 1, Name = "Sam"}
+    };
+}
