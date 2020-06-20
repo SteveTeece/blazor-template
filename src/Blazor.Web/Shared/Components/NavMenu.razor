@@ -2,12 +2,12 @@
 @inject NavigationManager navigationManager
 
 <MatNavMenu Multi="true" Class="app-sidebar">
-    <MatNavItem Href="@navigationManager.ToAbsoluteUri(" ").AbsoluteUri" NavLinkMatch="NavLinkMatch.All">
-        <MatIcon>home</MatIcon> <span class="miniHover">Home page</span>
+    <MatNavItem Href="@navigationManager.ToAbsoluteUri("").AbsoluteUri" NavLinkMatch="NavLinkMatch.All">
+        <MatIcon>home</MatIcon> <span class="miniHover">Home</span>
     </MatNavItem>
 
-    <MatNavItem Href="@navigationManager.ToAbsoluteUri("todo_list").AbsoluteUri">
-        <MatIcon>list_alt</MatIcon> <span class="miniHover">Todo List</span>
+    <MatNavItem Href="@navigationManager.ToAbsoluteUri("table").AbsoluteUri">
+        <MatIcon>list_alt</MatIcon> <span class="miniHover">Table</span>
     </MatNavItem>
 
     @*<MatNavSubMenu>
@@ -78,13 +78,13 @@
         </NotAuthorized>
     </AuthorizeView>*@
 
-    <MatNavItem Href="@navigationManager.ToAbsoluteUri("forum").AbsoluteUri" Disabled="@(!IsLoggedIn)">
+    @*<MatNavItem Href="@navigationManager.ToAbsoluteUri("forum").AbsoluteUri" Disabled="@(!IsLoggedIn)">
         <MatIcon>forum</MatIcon> <span class="miniHover">Forum</span>
     </MatNavItem>
 
     <MatNavItem Href="@navigationManager.ToAbsoluteUri("sponsors").AbsoluteUri">
         <MatIcon>attach_money</MatIcon> <span class="miniHover">Sponsors</span>
-    </MatNavItem>
+    </MatNavItem>*@
 </MatNavMenu>
 
 @code {
